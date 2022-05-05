@@ -69,7 +69,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Welcome to MovieList!</h1>
+      <h1 className='page-title'>Welcome to MovieList!</h1>
       <section className='upper-section'>
         <MovieForm 
           movieFormTitle={movieFormTitle}
