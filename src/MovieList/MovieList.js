@@ -1,7 +1,20 @@
 import React from 'react';
+import Movie from '../Movie/Movie';
 
-export default function MovieList() {
+export default function MovieList({ allMovies, handleDeleteMovie }) {
   return (
-    <div>MovieList</div>
+    <div>
+      {
+        allMovies.map((movie, i) => 
+          <Movie 
+            key={`${movie.movieFormTitle}-${i}`}
+            movieFormTitle={movie.movieFormTitle}
+            movieFormDirector={movie.movieFormDirector}
+            movieFormYear={movie.movieFormYear}
+            movieFormColor={movie.movieFormColor}
+            handleDeleteMovie={handleDeleteMovie}
+          />)
+      }
+    </div>
   );
 }
