@@ -30,7 +30,17 @@ function App() {
     <div className="App">
       <h1>Welcome to MovieList!</h1>
       <section className='upper-section'>
-        <MovieForm />
+        <MovieForm 
+          movieFormTitle={movieFormTitle}
+          setMovieFormTitle={setMovieFormTitle}
+          movieFormDirector={movieFormDirector}
+          setMovieFormDirector={setMovieFormDirector}
+          movieFormYear={movieFormYear}
+          setMovieFormYear={setMovieFormYear}
+          movieFormColor={movieFormColor}
+          setMovieFormColor={setMovieFormColor}
+          submitMovie={submitMovie}
+        />
         <Movie />
       </section>
       <section className='middle-section'>
