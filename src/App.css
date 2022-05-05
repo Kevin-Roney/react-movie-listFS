@@ -6,6 +6,11 @@ body, html, #root {
   height: 100%;
 }
 
+body {
+  background-image: url(./background.jpg);
+  background-size: cover;
+}
+
 .App {
   text-align: center;
   width: 70%;
