@@ -13,6 +13,9 @@ function App() {
   const [filteredMovies, setFilteredMovies] = useState([]);
   const [filterQuery, setFilterQuery] = useState('');
 
+  useEffect(() => handleFilterMovies(filterQuery),
+    [allMovies, filterQuery]);
+
   function submitMovie(e) {
     e.preventDefault();
     const newMovie = {
@@ -31,6 +34,18 @@ function App() {
     const indexToRemove = allMovies.findIndex(movie => movie.movieFormTitle === movieFormTitle);
     allMovies.splice(indexToRemove, 1);
     setAllMovies([...allMovies]);
+  }
+  function handleFilterMovies(search) {
+    if (search) {
+      const matchingMovies = allMovies.filter(
+        movie => movie.movieFormTitle.toLowerCase()
+          .includes(search.toLowerCase()
+          )
+      );
+      setFilteredMovies([...matchingMovies]);
+    } else {
+      setFilteredMovies([...allMovies]);
+    }
   }
 
   return (
