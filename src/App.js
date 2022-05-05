@@ -72,12 +72,12 @@ function App() {
       </section>
       <section className='middle-section'>
         <label>Filter
-          <input className='filter-input'/>
+          <input className='filter-input' onChange={(e) => setFilterQuery(e.target.value)}/>
         </label>
       </section>
       <section className='lower-section'>
         <MovieList 
-          allMovies={allMovies}
+          allMovies={filterQuery ? filteredMovies : allMovies}
           handleDeleteMovie={handleDeleteMovie}
         />
       </section>
