@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 import Movie from './Movie/Movie';
 import MovieForm from './MovieForm/MovieForm';
@@ -10,6 +10,8 @@ function App() {
   const [movieFormDirector, setMovieFormDirector] = useState('');
   const [movieFormYear, setMovieFormYear] = useState('');
   const [movieFormColor, setMovieFormColor] = useState('lightgreen');
+  const [filteredMovies, setFilteredMovies] = useState([]);
+  const [filterQuery, setFilterQuery] = useState('');
 
   function submitMovie(e) {
     e.preventDefault();
