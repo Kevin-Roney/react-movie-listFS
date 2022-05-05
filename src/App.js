@@ -25,6 +25,12 @@ function App() {
     setMovieFormYear('');
     setMovieFormColor('lightgreen');
   }
+  function handleDeleteMovie(movieFormTitle) {
+    const indexToRemove = allMovies.findIndex(movie => movie.movieFormTitle === movieFormTitle);
+    allMovies.splice(indexToRemove, 1);
+    setAllMovies([...allMovies]);
+  }
+
   return (
     <div className="App">
       <h1>Welcome to MovieList!</h1>
@@ -48,7 +54,10 @@ function App() {
         </label>
       </section>
       <section className='lower-section'>
-        <MovieList />
+        <MovieList 
+          allMovies={allMovies}
+          handleDeleteMovie={handleDeleteMovie}
+        />
       </section>
     </div>
   );
