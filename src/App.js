@@ -46,7 +46,12 @@ function App() {
           setMovieFormColor={setMovieFormColor}
           submitMovie={submitMovie}
         />
-        <Movie />
+        <Movie 
+          movieFormTitle={movieFormTitle}
+          movieFormDirector={movieFormDirector}
+          movieFormYear={movieFormYear}
+          movieFormColor={movieFormColor}
+        />
       </section>
       <section className='middle-section'>
         <label>Filter
