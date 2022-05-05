@@ -14,7 +14,7 @@ function App() {
   const [filterQuery, setFilterQuery] = useState('');
 
   useEffect(() => handleFilterMovies(filterQuery),
-    [allMovies, filterQuery]);
+    [allMovies, filterQuery]);//eslint-disable-line
 
   function submitMovie(e) {
     e.preventDefault();
