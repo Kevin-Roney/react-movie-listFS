@@ -10,7 +10,22 @@ function App() {
   const [movieFormTitle, setMovieFormTitle] = useState('');
   const [movieFormDirector, setMovieFormDirector] = useState('');
   const [movieFormYear, setMovieFormYear] = useState('');
-  const [movieFormColor, setMovieFormColor] = useState('green');
+  const [movieFormColor, setMovieFormColor] = useState('lightgreen');
+
+  function submitMovie(e) {
+    e.preventDefault();
+    const newMovie = {
+      movieFormTitle,
+      movieFormDirector,
+      movieFormYear,
+      movieFormColor,
+    };
+    setAllMovies([...allMovies, newMovie]);
+    setMovieFormTitle('');
+    setMovieFormDirector('');
+    setMovieFormYear('');
+    setMovieFormColor('lightgreen');
+  }
   return (
     <div className="App">
       <h1>Welcome to MovieList!</h1>
