@@ -5,7 +5,26 @@ import MovieForm from './MovieForm/MovieForm';
 import MovieList from './MovieList/MovieList';
 
 function App() {
-  const [allMovies, setAllMovies] = useState([]);
+  const [allMovies, setAllMovies] = useState([
+    {
+      movieFormTitle: 'Star Wars',
+      movieFormDirector: 'George Lucas',
+      movieFormYear: 1977,
+      movieFormColor: 'red'
+    },
+    {
+      movieFormTitle: 'The Hitchhikers Guide to the Galaxy',
+      movieFormDirector: 'Garth Jennings',
+      movieFormYear: 2005,
+      movieFormColor: 'orange'
+    },
+    {
+      movieFormTitle: 'Blade Runner',
+      movieFormDirector: 'Ridley Scott',
+      movieFormYear: 1982,
+      movieFormColor: 'lightgreen'
+    }
+  ]);
   const [movieFormTitle, setMovieFormTitle] = useState('');
   const [movieFormDirector, setMovieFormDirector] = useState('');
   const [movieFormYear, setMovieFormYear] = useState('');
