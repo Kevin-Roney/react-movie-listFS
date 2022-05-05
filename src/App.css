@@ -25,6 +25,12 @@ body {
   grid-template-rows: 1fr;
 }
 
+.movie-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .movie-form label, .movie-form input {
   display: block;
 }
