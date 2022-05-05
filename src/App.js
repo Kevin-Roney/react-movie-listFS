@@ -63,12 +63,16 @@ function App() {
           setMovieFormColor={setMovieFormColor}
           submitMovie={submitMovie}
         />
-        <Movie 
-          movieFormTitle={movieFormTitle}
-          movieFormDirector={movieFormDirector}
-          movieFormYear={movieFormYear}
-          movieFormColor={movieFormColor}
-        />
+        { 
+          movieFormTitle || movieFormDirector || movieFormYear 
+            ? <Movie 
+              movieFormTitle={movieFormTitle}
+              movieFormDirector={movieFormDirector}
+              movieFormYear={movieFormYear}
+              movieFormColor={movieFormColor} />
+            : <div>Type Something to view preview!</div>
+        }
+        
       </section>
       <section className='middle-section'>
         <label>Filter
